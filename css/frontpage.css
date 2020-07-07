@@ -1,0 +1,33 @@
+.frontpage-container{
+    display: grid;
+    grid-template-columns: 10% auto auto 10%;
+    grid-template-rows: 50px 50px 80vh 20vh;
+    column-gap: 6px;
+    row-gap: 6px;
+    grid-template-areas: 
+    "header header header header"
+    "s-header s-header s-header s-header"
+    ". main main ."
+    "footer footer footer footer";
+}
+
+.frontpage-menu{ 
+    grid-area: header;
+}
+
+.region-primary-menu{
+    border-top: none;
+/*  42px = 50px - 6px, comes from grid layout */
+    height: 42px; 
+}
+
+.frontpage-secondary-menu{
+    grid-area: s-header;
+}
+.frontpage-content{ 
+    grid-area: main;
+}
+.frontpage-footer{ 
+    grid-area: footer;
+    color: grey;
+}

@@ -1,0 +1,15 @@
+{{ attach_library('modern_simple/modern-frontpage') }}
+<div class="frontpage-container">
+    <div class="frontpage-menu">
+        {{ page.primary_menu }}
+        {{ page.secondary_menu }}
+    </div>
+    <div class="frontpage-content">
+        <h1 id="site-title"> {{site_name}} </h1> 
+        <p> {{site_slogan}} </p>
+        <p> custom page here! </p>
+    </div>
+    <div class="frontpage-footer"> 
+        {{page.footer}}
+    </div>
+</div>

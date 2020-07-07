@@ -1,0 +1,18 @@
+global-styling:
+  version: 1.x
+  footer: true
+  css:
+    theme:
+      css/global.css: {}
+  js:
+    js/global.js: {}
+  dependencies:
+    - core/jquery
+modern-frontpage:
+  version: 1.x
+  footer: true
+  css:
+    theme:
+      css/frontpage.css: {}
+  js:
+    js/frontpage.js: {}

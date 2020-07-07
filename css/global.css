@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+body{
+    font-family: 'Roboto', helvetica, sans-serif;
+}
+h1, h2{
+    margin-top: 0px;
+    font-family: 'Vidaloka', serif;
+}
+
+/* links  */
+
+a{
+    text-decoration: none;
+    opacity: 1;
+    transition: 300ms;
+    color:black;
+}
+
+a:hover{
+    opacity: .75;
+}
+
+ul.menu a.is-active{
+    color: orange;
+}
+
+
+/* PAGE LAYOUT!!!! */
+.layout-container{
+    display: grid;
+    grid-template-columns: 10% auto auto 10%;
+    grid-template-rows: 100px 50px 50px auto auto 20vh;
+    column-gap: 6px;
+    row-gap: 6px;
+    grid-template-areas: 
+    ". title title ."
+    "p-header p-header p-header p-header"
+    "s-header s-header s-header s-header"
+    ". header header ."
+    ". main main ."
+    "footer footer footer footer";
+}
+
+/* Site title */
+
+.layout-site-name{
+    grid-area: title;
+    text-align: center;
+}
+
+.modern-title-header{ 
+    letter-spacing: 10px; 
+    margin-bottom: .5em;
+    margin-top: .25em;
+}
+
+.slogan-header{
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+    margin-top: 0px;
+    letter-spacing: 4px;
+}
+
+/* Menus */
+
+.region-primary-menu{
+    grid-area: p-header;
+    background-color: white;
+    box-shadow: 5px 5px 8px #efefef;
+    border-top: 1px solid grey;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-top: none;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+.region-secondary-menu{
+    grid-area: s-header;
+    color: black;
+}
+
+ul.menu{
+    margin: 10px 10%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-item{
+    margin-left: 1em;
+}
+
+ul.menu > li{
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 300ms;
+}
+
+ul.menu > li:hover{
+    background-color: #c3ebeb;
+}
+
+/* log in / sign up */
+
+ul.menu.menu-account{
+    justify-content: flex-end;
+}
+
+header{
+    grid-area: header;
+}
+
+/* Content body */
+
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content{
+    display: none;
+}
+.region-content{
+    padding-right: 2em;
+}
+
+.layout-content{
+/*     Make footer stick at bottom of the page */
+    min-height: calc( 100vh - 20vh);
+    max-width: 60vw;
+}
+
+/* Sidebar */
+.layout-sidebar-first{
+    background-color: #efefef;
+    padding: 6px;
+    flex-grow: 1;
+}
+
+
+/* footer */
+footer{
+    grid-area: footer;
+    color: grey;
+    border: none;
+}
+
+.region-footer{
+    text-align: center;    
+}
+
+/* Utility Classes */
+
+.m-container{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.m-left{
+    margin-left: 10%;
+}
+
+.m-right{
+    margin-right: 10%;
+}

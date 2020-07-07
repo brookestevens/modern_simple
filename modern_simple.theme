@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_preprocess().
+ */
+function modern_simple_preprocess(&$vars) {
+  $config = \Drupal::config('system.site');
+  $vars['site_name'] = $config->get('name');
+  $vars['site_slogan'] = $config->get('slogan');
+}

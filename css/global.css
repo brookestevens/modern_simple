@@ -1,34 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
+/* COLORS!! */
+/* Background: white */
+/* Grey: #efefef */
+/* Oange: #FB8B24 */
+/* Blue: #c3ebeb */
+/* Red: #DB5461 */
 
 body{
     font-family: 'Roboto', helvetica, sans-serif;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, white 0%, white 90vh, #efefef 100%);
 }
 h1, h2{
     margin-top: 0px;
     font-family: 'Vidaloka', serif;
 }
 
+h1 > span {
+    border-bottom: 5px solid #c3ebeb;
+}
+
 /* links  */
 
 a{
     text-decoration: none;
-    opacity: 1;
     transition: 300ms;
     color:black;
 }
 
 a:hover{
-    opacity: .75;
+/*     change hover links to red */
+    color: #DB5461;
 }
 
 ul.menu a.is-active{
-    color: orange;
+/*     active links are dark orange */
+    color: #FB8B24;
 }
 
 
 /* PAGE LAYOUT!!!! */
+/* Dimensions */
+/* footer = 20vh */
+
+
 .layout-container{
     display: grid;
     grid-template-columns: 10% auto auto 10%;
@@ -146,16 +163,27 @@ main{
 
 /* Sidebar */
 .layout-sidebar-first{
-    background-color: #efefef;
     padding: 6px;
     flex-grow: 1;
+}
+
+.region-sidebar-first{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.region-sidebar-first > *{
+    margin-bottom: 2em;
+    background-color: #efefef;
+    padding: 1em;
 }
 
 
 /* footer */
 footer{
     grid-area: footer;
-    color: grey;
+    color: black;
     border: none;
 }
 

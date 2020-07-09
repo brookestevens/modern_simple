@@ -1,7 +1,14 @@
+#background-image{
+    position: absolute;
+    top: 165px;
+    width: 100%;
+    z-index: -1;
+}
+
 .frontpage-container{
     display: grid;
     grid-template-columns: 10% auto auto 10%;
-    grid-template-rows: 50px 50px 80vh 20vh;
+    grid-template-rows: 50px 50px auto 20vh;
     column-gap: 6px;
     row-gap: 6px;
     grid-template-areas: 
@@ -17,17 +24,54 @@
 
 .region-primary-menu{
     border-top: none;
-/*  42px = 50px - 6px, comes from grid layout */
-    height: 42px; 
+
+}
+
+.region-primary-menu{
+    padding: 4px 0px;
+}
+
+.menu-main{
+    margin-top: 0px 10%;
 }
 
 .frontpage-secondary-menu{
     grid-area: s-header;
 }
+
+.frontpage-title{
+    margin: auto;
+    width: auto;
+    text-align: center;
+    margin-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+#site-title{
+    letter-spacing: 8px;
+    font-size: 4em;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+#site-slogan{
+    letter-spacing: 8px;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    margin-top: 0px;
+}
+
 .frontpage-content{ 
     grid-area: main;
 }
+
+.region-content{
+    margin-top: 2em;
+    padding: 5em 8em;    
+}
+
+
 .frontpage-footer{ 
     grid-area: footer;
-    color: grey;
+    color: black;
 }
